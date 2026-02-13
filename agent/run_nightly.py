@@ -1,4 +1,4 @@
-from idea_hunt import run_idea_hunt
+from agent.idea_hunt import run_idea_hunt
 
 def main():
     print("[nightly-agent] Starting run")
