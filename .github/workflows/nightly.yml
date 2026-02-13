@@ -20,6 +20,7 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Run agent
-        run: |
-          python agent/run_nightly.py
+    - name: Run agent
+  run: |
+    python -m agent.run_nightly
+
