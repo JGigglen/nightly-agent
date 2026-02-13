@@ -3,11 +3,12 @@ name: nightly-agent
 on:
   schedule:
     - cron: "0 9 * * *" # 1am Pacific
-  workflow_dispatch: {}
+  workflow_dispatch:
 
 jobs:
   run:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
@@ -20,7 +21,6 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-    - name: Run agent
-  run: |
-    python -m agent.run_nightly
-
+      - name: Run agent
+        run: |
+          python agent/run_nightly.py
